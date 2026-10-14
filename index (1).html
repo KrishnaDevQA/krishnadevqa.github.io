@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishna Jaiswal | Freelance QA Engineer</title>
+<meta name="description" content="Freelance QA Engineer with 5+ years of experience in Selenium (Java) automation, API testing and SaaS web application quality. Open to freelance and contract projects.">
+<meta property="og:title" content="Krishna Jaiswal | Freelance QA Engineer">
+<meta property="og:description" content="Selenium (Java) automation, API testing and manual QA for SaaS teams.">
+<link rel="canonical" href="https://krishnadevqa.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://krishnadevqa.github.io/">
+<meta property="og:image" content="https://krishnadevqa.github.io/thumbnail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://krishnadevqa.github.io/thumbnail.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B1B3A'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-size='48' font-weight='700' text-anchor='middle' fill='%23C9A24B'%3EKJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-950: #081428;
+    --navy-900: #0B1B3A;
+    --navy-800: #12274F;
+    --navy-700: #1D3768;
+    --line: rgba(201, 162, 75, 0.22);
+    --gold: #C9A24B;
+    --gold-soft: #E3C77D;
+    --text: #E9EDF5;
+    --muted: #A3B0CA;
+    --pass: #6FCF97;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--navy-900);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; border-radius: 4px; }
+  .wrap { width: min(1120px, 100% - 48px); margin-inline: auto; }
+
+  /* Header */
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11, 27, 58, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .monogram {
+    width: 40px; height: 40px; border-radius: 50%;
+    display: grid; place-items: center;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--serif); font-weight: 600; font-size: 18px; letter-spacing: 0.02em;
+  }
+  .brand span.name { font-family: var(--serif); font-size: 19px; font-weight: 500; }
+  nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+  nav a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; transition: color .2s; }
+  nav a:hover { color: var(--gold-soft); }
+
+  /* Hero */
+  .hero { padding: 96px 0 104px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+  h1 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(2.5rem, 5.2vw, 4.1rem);
+    line-height: 1.08; letter-spacing: -0.015em; margin: 0 0 24px;
+  }
+  .hero p.lead { color: var(--muted); font-size: 1.12rem; max-width: 52ch; margin: 0 0 36px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn {
+    display: inline-block; padding: 13px 26px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    border: 1.5px solid var(--gold); transition: background .2s, color .2s, border-color .2s;
+  }
+  .btn.primary { background: var(--gold); color: var(--navy-950); }
+  .btn.primary:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
+  .btn.ghost { color: var(--gold-soft); }
+  .btn.ghost:hover { background: rgba(201,162,75,.12); }
+
+  /* Test run panel */
+  .run {
+    background: var(--navy-950);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px 20px;
+    font-size: 14.5px;
+  }
+  .run-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .run-head strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+  .run-head span { color: var(--muted); font-size: 13px; }
+  .run ul { list-style: none; margin: 0; padding: 0; }
+  .run li { display: flex; align-items: center; gap: 12px; padding: 9px 0; color: var(--muted); }
+  .run li .mark {
+    flex: none; width: 20px; height: 20px; border-radius: 50%;
+    border: 1.5px solid var(--navy-700);
+    display: grid; place-items: center;
+    transition: background .25s, border-color .25s;
+  }
+  .run li .mark svg { width: 11px; height: 11px; opacity: 0; transition: opacity .25s; }
+  .run li.done { color: var(--text); }
+  .run li.done .mark { background: var(--pass); border-color: var(--pass); }
+  .run li.done .mark svg { opacity: 1; }
+  .run-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .run-foot .result { color: var(--pass); font-weight: 600; opacity: 0; transition: opacity .3s; }
+  .run-foot .result.show { opacity: 1; }
+  .replay { background: none; border: 0; color: var(--gold-soft); font: inherit; font-size: 13.5px; cursor: pointer; padding: 4px 2px; }
+  .replay:hover { text-decoration: underline; }
+
+  /* Sections */
+  section { padding: 88px 0; }
+  section.alt { background: var(--navy-800); border-block: 1px solid var(--line); }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .section-intro { color: var(--muted); max-width: 60ch; margin: 0 0 48px; }
+  h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; line-height: 1.25; margin: 0 0 6px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .about-grid p { margin: 0 0 18px; color: var(--muted); max-width: 58ch; }
+  .about-grid p:first-of-type { color: var(--text); font-size: 1.12rem; }
+  .skills { display: grid; gap: 22px; }
+  .skills h4 { margin: 0 0 8px; font-size: 15px; font-weight: 600; color: var(--gold-soft); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { padding: 5px 13px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--text); }
+
+  /* Case studies */
+  .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .case { border: 1px solid var(--line); border-radius: 12px; padding: 30px 30px 26px; background: var(--navy-900); display: flex; flex-direction: column; }
+  .case.lead { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 38px; }
+  .case .meta { color: var(--gold-soft); font-size: 14.5px; margin: 0 0 18px; }
+  .case p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+  .case p strong { color: var(--text); font-weight: 600; }
+  .case ul { margin: 0 0 18px; padding-left: 20px; color: var(--muted); font-size: 16px; }
+  .case ul li { margin-bottom: 6px; }
+  .case .tools { margin-top: auto; padding-top: 6px; }
+  .note { margin-top: 28px; color: var(--muted); font-size: 14.5px; font-style: italic; font-family: var(--serif); font-size: 16px; }
+
+  /* Framework */
+  .fw { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  pre.tree {
+    margin: 0; padding: 26px 28px; overflow-x: auto;
+    background: var(--navy-950); border: 1px solid var(--line); border-radius: 12px;
+    color: var(--muted); font-size: 14px; line-height: 1.75;
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  pre.tree b { color: var(--gold-soft); font-weight: 500; }
+  .features { list-style: none; margin: 0 0 30px; padding: 0; }
+  .features li { padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .features li:first-child { border-top: 1px solid var(--line); }
+  .features li strong { color: var(--text); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  /* Experience timeline */
+  .timeline { position: relative; margin: 0; padding: 0 0 0 34px; list-style: none; max-width: 760px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1.5px; background: var(--line); }
+  .timeline li { position: relative; padding-bottom: 44px; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -34px; top: 9px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--navy-900); border: 2px solid var(--gold);
+  }
+  .timeline li.now::before { background: var(--gold); }
+  .timeline .when { color: var(--gold-soft); font-size: 14.5px; margin: 0 0 4px; }
+  .timeline p { margin: 8px 0 0; color: var(--muted); max-width: 62ch; }
+
+  /* Contact */
+  .contact h2 { max-width: 20ch; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+  footer { padding: 30px 0 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14.5px; }
+
+  @media (max-width: 860px) {
+    .hero { padding: 64px 0 72px; }
+    .hero .wrap, .about-grid, .fw, .case.lead { grid-template-columns: 1fr; gap: 40px; }
+    .cases { grid-template-columns: 1fr; }
+    .case.lead { gap: 8px; padding: 30px; }
+    section { padding: 64px 0; }
+    nav ul { gap: 18px; }
+    .brand span.name { display: none; }
+  }
+  @media (max-width: 480px) {
+    nav ul li:nth-child(n+4) { display: none; }
+    body { font-size: 16.5px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Krishna Jaiswal, home">
+      <span class="monogram">KJ</span>
+      <span class="name">Krishna Jaiswal</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#framework">Framework</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>I find the defects before your users do.</h1>
+        <p class="lead">I'm Krishna, a freelance QA engineer with 5+ years of experience testing SaaS web applications. I combine careful manual testing with Selenium (Java) automation and API testing, so your releases ship with confidence.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contact">Work with me</a>
+          <a class="btn ghost" href="Krishna_Jaiswal_Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+
+      <div class="run" aria-label="Sample test run">
+        <div class="run-head"><strong>Regression run</strong><span id="runStatus">Running</span></div>
+        <ul id="runList">
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" stroke="#081428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5l2.3 2.3 4.7-5"/></svg></span>Hearing alerts fire at the scheduled time</li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" stroke="#081428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5l2.3 2.3 4.7-5"/></svg></span>Court data matches the official source</li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" stroke="#081428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5l2.3 2.3 4.7-5"/></svg></span>Invoice totals recalculate correctly</li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" stroke="#081428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5l2.3 2.3 4.7-5"/></svg></span>Permission-based workflows respect roles</li>
+          <li><span class="mark"><svg viewBox="0 0 12 12" fill="none" stroke="#081428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5l2.3 2.3 4.7-5"/></svg></span>Large-volume search returns a full report</li>
+        </ul>
+        <div class="run-foot"><span class="result" id="runResult">5 of 5 passed</span><button class="replay" id="replay" type="button">Run again</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
+    <div class="wrap about-grid">
+      <div>
+        <h2>Quality that teams can rely on</h2>
+        <p>I started as a full-time QA at a product company, where I built Selenium frameworks and plugged them into CI pipelines. Since January 2025 I have been working as a freelance QA engineer on legal-tech products.</p>
+        <p>I'm most useful on data-heavy platforms, where one wrong value in a report matters. I check results against source data, test the awkward edge cases, and write bug reports that developers can act on without a follow-up call.</p>
+        <p>I work remotely, join sprint planning and triage, and keep documentation clear enough for the next person to pick up.</p>
+      </div>
+      <div class="skills">
+        <div><h4>Automation</h4><div class="chips"><span class="chip">Selenium WebDriver</span><span class="chip">TestNG</span><span class="chip">Maven</span><span class="chip">Jenkins</span><span class="chip">Page Object Model</span><span class="chip">Apache POI</span></div></div>
+        <div><h4>API and data</h4><div class="chips"><span class="chip">Postman (REST, SOAP)</span><span class="chip">XML and JSON</span><span class="chip">MySQL</span></div></div>
+        <div><h4>Language</h4><div class="chips"><span class="chip">Core Java</span></div></div>
+        <div><h4>Testing</h4><div class="chips"><span class="chip">Functional</span><span class="chip">Regression</span><span class="chip">Exploratory</span><span class="chip">Integration</span><span class="chip">UAT</span><span class="chip">Cross-browser</span></div></div>
+        <div><h4>Tools and process</h4><div class="chips"><span class="chip">Jira</span><span class="chip">TestRail</span><span class="chip">Agile / Scrum</span><span class="chip">BRD / FSD analysis</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="section-intro">Four products I have tested. Client names are withheld under confidentiality, so each project is described by its domain.</p>
+
+      <div class="cases">
+        <article class="case">
+          <h3>Litigation management platform</h3>
+          <p class="meta">Legal-tech | Freelance QA engineer | Jan 2025 to present</p>
+          <p>A web application that helps law teams manage cases, invoices, alerts, orders and pre-litigation work. A missed hearing alert has real consequences, so timing and accuracy matter.</p>
+          <ul>
+            <li>Tested case management, invoices, suggestion alerts, order tracker and pre-litigation modules.</li>
+            <li>Tested alerts, email notifications and hearing schedules, improving system stability by 30%.</li>
+            <li>Checked court data against official sources, cutting data inconsistency by 25%.</li>
+            <li>Closed 95%+ of defects within the sprint cycle.</li>
+          </ul>
+          <div class="chips tools"><span class="chip">Selenium (Java)</span><span class="chip">MySQL</span><span class="chip">Jira</span></div>
+        </article>
+
+        <article class="case">
+          <h3>Legal due diligence platform</h3>
+          <p class="meta">Legal-tech | Freelance QA engineer | Jan 2025 to present</p>
+          <p>An AI-assisted tool that identifies individuals, companies and litigation risk from large volumes of legal data.</p>
+          <ul>
+            <li>Tested case search, FIR lookup and report generation end to end.</li>
+            <li>Verified report accuracy against search results and entity details.</li>
+            <li>Reported data mismatches and slow large-volume searches.</li>
+          </ul>
+          <div class="chips tools"><span class="chip">Exploratory</span><span class="chip">Regression</span><span class="chip">MySQL</span></div>
+        </article>
+
+        <article class="case">
+          <h3>B2B eCommerce platform for grocery stores</h3>
+          <p class="meta">eCommerce | Full-time QA analyst | Crocus Robotics</p>
+          <p>A wholesale ordering platform for grocery retailers.</p>
+          <ul>
+            <li>Built automation scripts for the regression and smoke suites.</li>
+            <li>Created a data-driven framework with reusable components.</li>
+          </ul>
+          <div class="chips tools"><span class="chip">Selenium</span><span class="chip">TestNG</span><span class="chip">Maven</span><span class="chip">Jenkins</span><span class="chip">Postman</span></div>
+        </article>
+
+        <article class="case">
+          <h3>Loan and credit score platform</h3>
+          <p class="meta">Fintech | Full-time QA analyst | Crocus Robotics</p>
+          <p>A platform for loan and credit card applications with credit score tracking.</p>
+          <ul>
+            <li>Took part in requirement reviews and test planning.</li>
+            <li>Executed and documented functional and UI test cases.</li>
+            <li>Worked with stakeholders to resolve issues quickly.</li>
+          </ul>
+          <div class="chips tools"><span class="chip">Selenium</span><span class="chip">TestNG</span><span class="chip">Jira</span><span class="chip">Postman</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="framework" class="alt">
+    <div class="wrap fw">
+      <div>
+        <h2>My automation framework</h2>
+        <p class="section-intro" style="margin-bottom:28px">A personal project that shows how I structure test automation: small reusable pieces, configuration kept outside the code, and a result I can read at a glance.</p>
+        <ul class="features">
+          <li><strong>Page Object Model</strong>Each page has one class, and tests read like the user journey.</li>
+          <li><strong>Configuration management</strong>URL, browser and timeouts live in a properties file, so nothing is hard-coded.</li>
+          <li><strong>Logging, reports and screenshots</strong>Every run leaves evidence that explains a failure.</li>
+          <li><strong>TestNG suites on Maven</strong>Run one suite or the whole set from the IDE or the command line.</li>
+        </ul>
+        <a class="btn primary" href="https://github.com/KrishnaDevQA/demo-framework" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+      <pre class="tree" aria-label="Framework folder structure"><b>demo-framework/</b>
+├── config/
+│   └── config.properties
+├── src/
+│   ├── main/java/
+│   │   ├── base_page/
+│   │   ├── constants/
+│   │   ├── pages/
+│   │   └── utils/
+│   └── test/
+├── test_suites/
+│   └── TextBoxPageTest.xml
+├── reports/
+├── screenshots/
+├── logs/
+└── pom.xml
+
+Java 21 | Selenium WebDriver | TestNG | Maven</pre>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="section-intro">Over five years in QA, first inside a product team and now independently.</p>
+      <ol class="timeline">
+        <li class="now">
+          <p class="when">January 2025 to present</p>
+          <h3>Freelance QA engineer, LQ Global Services</h3>
+          <p>End-to-end testing of legal-tech web applications. Defect tracking, data validation against official sources, and sprint-level QA planning with product and development teams.</p>
+        </li>
+        <li>
+          <p class="when">December 2020 to December 2024</p>
+          <h3>Quality analyst (full-time), Crocus Robotics</h3>
+          <p>Built Selenium (Java) automation in a Page Object Model framework, designed test cases with product managers, tracked defects in Jira, and connected the suites to Jenkins for continuous testing.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="alt contact">
+    <div class="wrap">
+      <h2>Have a release to protect?</h2>
+      <p class="section-intro" style="margin-bottom:0">I'm taking on freelance and contract QA projects. Tell me about your product and I'll reply within a day.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="mailto:krishnajs100@gmail.com">krishnajs100@gmail.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/krishnajaiswal18" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/KrishnaDevQA" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Krishna Jaiswal, New Delhi, India</div>
+</footer>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('#runList li');
+    var result = document.getElementById('runResult');
+    var status = document.getElementById('runStatus');
+    var btn = document.getElementById('replay');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timers = [];
+
+    function clear() { timers.forEach(clearTimeout); timers = []; }
+
+    function run() {
+      clear();
+      items.forEach(function (li) { li.classList.remove('done'); });
+      result.classList.remove('show');
+      status.textContent = 'Running';
+      if (reduce) {
+        items.forEach(function (li) { li.classList.add('done'); });
+        result.classList.add('show');
+        status.textContent = 'Finished';
+        return;
+      }
+      items.forEach(function (li, i) {
+        timers.push(setTimeout(function () { li.classList.add('done'); }, 700 + i * 650));
+      });
+      timers.push(setTimeout(function () {
+        result.classList.add('show');
+        status.textContent = 'Finished';
+      }, 700 + items.length * 650));
+    }
+
+    btn.addEventListener('click', run);
+    run();
+  })();
+</script>
+</body>
+</html>
